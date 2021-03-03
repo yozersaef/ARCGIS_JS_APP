@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.18/init.js"></script>
+    <title>ARCGIS_JS_APP</title>
+</head>
+<body>
+    <div id="mapview" style="width: 700px; height: 700px;"> map</div>
+    <script>
+        let map1;
+        let mapview;
+        require(["esri/Map", "esri/views/MapView","dojo/domReady!"],
+            function(Map, MapView) {
+                map1 = new Map({
+                    basemap: "topo",
+                    
+
+                });
+                mapview = new MapView({
+                    container: "mapview",
+                    map: map1,
+                    center: [ 44.20442603286224, 15.315088924865893 ],
+                    zoom: 10
+                })
+        
+            });
+    </script>
+    
+</body>
+</html>
